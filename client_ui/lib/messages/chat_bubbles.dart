@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/bubble_type.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:flutter_chat_bubble/clippers/chat_bubble_clipper_8.dart';
+import 'package:http/http.dart' as http;
+
+fetch() async {
+  final response = await http
+      .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+}
 
 class ChatBubbles extends StatelessWidget {
   const ChatBubbles(this.msg, this.isMine, {Key? key}) : super(key: key);
